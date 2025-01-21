@@ -4,7 +4,8 @@ public class MySorting_660019 {
     static int[] nums = { 5, 1, 1, 2, 0, 0 };
     public static void main(String[] args) {
         MySorting_660019 sort = new MySorting_660019();
-        sort.mergeSort();
+        // sort.mergeSort();
+        sort.quickSort();
         System.out.println(Arrays.toString(nums));
     }
     public void mergeSort() {
@@ -23,6 +24,7 @@ public class MySorting_660019 {
         int n2 = r - m;
         int L[] = new int[n1];
         int R[] = new int[n2];
+
 
         for (int i = 0; i < n1; ++i)
             L[i] = arr[l + i];

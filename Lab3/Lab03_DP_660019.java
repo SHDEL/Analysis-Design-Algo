@@ -17,10 +17,12 @@ public class Lab03_DP_660019 {
             System.out.println("-------Round L " + L + " ---------");
             for (i = 1; i < n - L + 1; i++) {
                 j = i + L - 1;
+                System.err.println("-------Round i" + i + "---------");
                 /* your code */
                 int min = Integer.MAX_VALUE;
                     for (k = i ; k <= j - 1; k++){
                         System.out.println("--------Round k " + k + "-----------");
+                        System.out.println("M" + i + j + "  = M" + i + k + " + M" + (k + 1) + j + " + D" + p[i - 1] + " * D" + p[k] + " * D" + p[j]);
                         numOps = (cost[i][k] + cost[k + 1][j]) + (p[i - 1] * p[k] * p[j]);
                         System.out.println("numops: " + numOps);
                         System.out.println("min: " + min);
@@ -33,8 +35,8 @@ public class Lab03_DP_660019 {
             }
         }
         System.out.println("cache content = ");
-        for (int r = 1; r < n; r++) {
-            for (int c = 1; c < n; c++)
+        for (int r = 0; r < n; r++) {
+            for (int c = 0; c < n; c++)
                 System.out.print(cost[r][c] + "\t");
             System.out.println();
         }
