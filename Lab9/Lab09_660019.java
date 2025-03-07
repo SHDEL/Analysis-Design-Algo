@@ -19,7 +19,6 @@ public class Lab09_660019 {
         firstFitDecreasing(itemsize, n, binCapacity);
         System.out.println("-------------Job Scheduling-------------");
         jobSchedule(itemsize, m);
-
         
     }
     public static void firstFit(int itemsize[], int n, int binCapacity){
@@ -126,5 +125,4 @@ public class Lab09_660019 {
             System.out.print("P" + (i + 1) + ": " + machines.get(i) + " Runtime Total: " + runtimeTotal + "\n");
         }
     }
-
 }
